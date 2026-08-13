@@ -1,0 +1,42 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tengok Tetangga">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#FFE566"/>
+      <stop offset="32%"  stop-color="#FFC200"/>
+      <stop offset="68%"  stop-color="#CC9B00"/>
+      <stop offset="100%" stop-color="#7A5500"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="rgba(255,255,255,0.22)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+    <clipPath id="roundedClip">
+      <rect width="200" height="200" rx="44"/>
+    </clipPath>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect width="200" height="200" rx="44" fill="url(#bgGrad)"/>
+
+  <!-- Top gloss -->
+  <rect width="200" height="100" rx="44" fill="url(#gloss)" clip-path="url(#roundedClip)"/>
+
+  <!-- Chimney -->
+  <rect x="126" y="46" width="18" height="36" rx="4" fill="white" opacity="0.92"/>
+  <rect x="122" y="40" width="26" height="14" rx="5" fill="white" opacity="0.92"/>
+
+  <!-- House body + roof + window hole + door hole (evenodd = window/door show gradient bg) -->
+  <path fill-rule="evenodd" fill="rgba(255,255,255,0.96)"
+    d="M100,36 L174,100 L156,100 L156,166 L44,166 L44,100 L26,100 Z
+       M122,120 a22,22 0 1,0 -44,0 a22,22 0 1,0 44,0
+       M82,145 L118,145 L118,166 L82,166 Z"/>
+
+  <!-- Eye iris (floats inside window hole showing gradient behind) -->
+  <circle cx="100" cy="120" r="14" fill="#CC9B00" opacity="0.70"/>
+
+  <!-- Eye pupil -->
+  <circle cx="100" cy="120" r="7"  fill="#4A3000"/>
+
+  <!-- Catchlight highlight -->
+  <circle cx="104" cy="116" r="3"  fill="rgba(255,255,255,0.90)"/>
+</svg>

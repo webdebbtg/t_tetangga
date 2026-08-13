@@ -1,0 +1,12 @@
+.git
+.github
+node_modules
+vendor
+frontend
+ai-service
+docker
+*.md
+setup.sh
+docker-compose.yml
+.phpunit.result.cache
+tests
